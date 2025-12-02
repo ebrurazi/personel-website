@@ -151,8 +151,8 @@ body {
 
 /* ================= HERO ================= */
 
-header {
-    padding: 7rem 1.2rem 3rem;
+/* Artık <header> değil, .hero-section kullanıyoruz */
+.hero-section {
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
@@ -238,7 +238,7 @@ header {
 main {
     max-width: 980px;
     margin: 0 auto;
-    padding: 7rem 1.2rem 3rem;
+    padding: 7rem 1.2rem 3rem; /* nav yüksekliği + içerik */
 }
 
 section {
@@ -422,23 +422,14 @@ footer {
 }
 
 /* =============== RESPONSIVE (MOBİL) =============== */
-
 @media (max-width: 768px) {
-
-    /* 🟣 Sadece mobilde: body üstten başlasın */
-    body {
-        display: flex;             /* Mevcut flex yapını bozma */
-        flex-direction: column;    /* Üstten alta doğru dizilsin */
-        justify-content: flex-start; /* Artık ortada değil, ÜSTTE başlasın */
-        align-items: stretch;      /* İçerik tam genişlikte olsun */
-    }
 
     /* Desktop nav kapansın */
     .desktop-nav {
         display: none;
     }
 
-    /* Mobil header görünsün */
+    /* Mobil header görünsün ve en üste sabitlensin */
     .mobile-header {
         display: flex;
         align-items: center;
@@ -499,11 +490,16 @@ footer {
         justify-content: flex-start;
     }
 
+    /* Mobilde hero daha kompakt ve ortalanmış olsun */
+    main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 6rem 1.2rem 3rem;
+    }
+
     .hero-section {
-        padding: 7rem 1.2rem 3rem;
-        min-height: calc(100vh - 80px);
-        display: flex;
-        align-items: center;
+        min-height: auto;
+        padding: 0;
     }
 
     .hero-layout {
@@ -522,9 +518,5 @@ footer {
 
     .hero-title {
         font-size: 2.1rem;
-    }
-
-    main {
-        padding-top: 6rem; /* header'ın altında başlasın */
     }
 }

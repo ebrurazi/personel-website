@@ -425,12 +425,12 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* 🟣 Body'yi mobile'da normal akışa döndür */
+    /* 🟣 Sadece mobilde: body üstten başlasın */
     body {
-        margin: 0;
-        display: block;          /* desktop'taki flex yapısını iptal eder */
-        align-items: flex-start;
-        justify-content: flex-start;
+        display: flex;             /* Mevcut flex yapını bozma */
+        flex-direction: column;    /* Üstten alta doğru dizilsin */
+        justify-content: flex-start; /* Artık ortada değil, ÜSTTE başlasın */
+        align-items: stretch;      /* İçerik tam genişlikte olsun */
     }
 
     /* Desktop nav kapansın */
@@ -438,7 +438,7 @@ footer {
         display: none;
     }
 
-    /* Mobil header görünsün ve en ÜSTE sabitlensin */
+    /* Mobil header görünsün */
     .mobile-header {
         display: flex;
         align-items: center;
@@ -524,8 +524,7 @@ footer {
         font-size: 2.1rem;
     }
 
-    /* Ana içerik header'ın altından başlasın */
     main {
-        padding-top: 6rem;
+        padding-top: 6rem; /* header'ın altında başlasın */
     }
 }

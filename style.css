@@ -153,10 +153,11 @@ body {
 
 /* Artık <header> değil, .hero-section kullanıyoruz */
 .hero-section {
-    min-height: calc(100vh - 80px);
+    width: 100%;
     display: flex;
     align-items: center;
 }
+
 
 .hero-layout {
     max-width: 980px;
@@ -238,7 +239,10 @@ body {
 main {
     max-width: 980px;
     margin: 0 auto;
-    padding: 7rem 1.2rem 3rem; /* nav yüksekliği + içerik */
+    padding: 5rem 1.2rem 3rem;          /* nav için boşluk */
+    min-height: calc(100vh - 80px - 80px); /* nav + footer’ı düşünerek ortalama */
+    display: flex;                       /* içeriği dikeyde ortalamak için */
+    align-items: center;                 /* dikey ortalama */
 }
 
 section {
@@ -495,11 +499,14 @@ footer {
         max-width: 980px;
         margin: 0 auto;
         padding: 6rem 1.2rem 3rem;
+        display: block;      /* desktop'taki flex'i iptal eder */
+        min-height: auto;
     }
 
     .hero-section {
         min-height: auto;
         padding: 0;
+        display: block;      /* mobilde normal akış */
     }
 
     .hero-layout {

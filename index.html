@@ -9,7 +9,7 @@
 
 <body data-language="tr">
 
-    <!-- ========= MOBİL HEADER ========== -->
+    <!-- ========= MOBİL HEADER ========= -->
     <header class="mobile-header">
         <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">
             <span></span>
@@ -20,7 +20,7 @@
         <div class="mobile-name">Ebru RAZİ</div>
     </header>
 
-    <!-- ========= MOBİL MENÜ ========== -->
+    <!-- ========= MOBİL MENÜ ========= -->
     <nav class="mobile-menu">
         <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
         <a href="about.html" class="mobile-nav-link">Hakkımda</a>
@@ -34,7 +34,7 @@
         </div>
     </nav>
 
-    <!-- ========= MASAÜSTÜ NAVBAR ========== -->
+    <!-- ========= MASAÜSTÜ NAVBAR ========= -->
     <div class="desktop-nav">
         <nav>
             <div class="nav-inner">
@@ -86,7 +86,6 @@
                         onclick="window.location.href='about.html'">
                         Benim Hakkımda
                     </button>
-
                     <button class="btn-ghost"
                         data-tr="CV'yi Görüntüle"
                         data-en="View CV"
@@ -101,7 +100,8 @@
     <!-- ========= FOOTER ========= -->
     <footer>
         <span id="year"></span> Ebru RAZİ.
-        <span data-tr="Tüm hakları saklıdır" data-en="All rights reserved.">
+        <span data-tr="Tüm hakları saklıdır"
+              data-en="All rights reserved.">
             Tüm hakları saklıdır.
         </span>
     </footer>
@@ -116,7 +116,7 @@
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-        // Mobil menü aç/kapat
+        // Mobil menü aç/kapa
         if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('open');
@@ -124,7 +124,7 @@
                 body.classList.toggle('menu-open');
             });
 
-            // Menüden linke tıklayınca kapanması
+            // Menüden bir linke tıklanınca menüyü kapat
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.remove('open');
@@ -134,20 +134,21 @@
             });
         }
 
-        // Yıl otomatik
+        // Footer yılı
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Dil Sistemi
+        // Dil ayarlama
         function setLanguage(lang) {
             body.setAttribute('data-language', lang);
             localStorage.setItem('siteLanguage', lang);
 
             langButtons.forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+                const bLang = btn.getAttribute('data-lang');
+                btn.classList.toggle('active', bLang === lang);
             });
 
             translatableElements.forEach(el => {
-                el.textContent = (lang === 'tr') 
+                el.textContent = (lang === 'tr')
                     ? el.getAttribute('data-tr')
                     : el.getAttribute('data-en');
             });

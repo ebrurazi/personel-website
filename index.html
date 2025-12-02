@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <title>Ebru RAZİ | Personal Website</title>
-    <meta name ="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body data-language="tr">
 
-    <!-- ========= MOBİL HEADER ========= -->
+    <!-- ======== MOBİL HEADER ======== -->
     <header class="mobile-header">
-        <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">
+        <button class="menu-toggle" aria-label="Menüyü aç/kapat">
             <span></span>
             <span></span>
             <span></span>
@@ -20,7 +20,7 @@
         <div class="mobile-name">Ebru RAZİ</div>
     </header>
 
-    <!-- ========= MOBİL MENÜ ========= -->
+    <!-- ======== MOBİL MENÜ ======== -->
     <nav class="mobile-menu">
         <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
         <a href="about.html" class="mobile-nav-link">Hakkımda</a>
@@ -34,7 +34,7 @@
         </div>
     </nav>
 
-    <!-- ========= MASAÜSTÜ NAVBAR ========= -->
+    <!-- ======== MASAÜSTÜ NAVBAR ======== -->
     <div class="desktop-nav">
         <nav>
             <div class="nav-inner">
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="nav-links">
-                    <a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+                    <a href="index.html" data-tr="Ana sayfa" data-en="Main Page">Ana Sayfa</a>
                     <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
                     <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
                     <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
@@ -59,13 +59,12 @@
         </nav>
     </div>
 
-    <!-- ========= HERO ALANI ========= -->
+    <!-- ======== HERO ======== -->
     <header>
         <div class="hero-layout">
             <div class="hero-image-wrapper">
                 <img src="profil-foto.png" alt="Ebru RAZİ" class="hero-image">
             </div>
-
             <div class="hero-text">
                 <h1 class="hero-title"
                     data-tr="Merhaba, ben Ebru RAZİ."
@@ -74,7 +73,7 @@
                 </h1>
 
                 <p class="hero-subtitle"
-                    data-tr="Bilgisayar Mühendisiyim. SAP ABAP, Yapay Zeka ve Backend alanlarında kendimi geliştiriyorum."
+                    data-tr="Bilgisayara Mühendisiyim. SAP ABAP, Yapay Zeka ve Backend alanlarında kendimi geliştiriyorum."
                     data-en="I am a Computer Engineer, focused on SAP ABAP development, AI and Backend.">
                     Bilgisayar Mühendisiyim. SAP ABAP geliştirme, Yapay Zeka ve Backend alanlarında kendimi geliştiriyorum.
                 </p>
@@ -97,7 +96,7 @@
         </div>
     </header>
 
-    <!-- ========= FOOTER ========= -->
+    <!-- ======== FOOTER ======== -->
     <footer>
         <span id="year"></span> Ebru RAZİ.
         <span data-tr="Tüm hakları saklıdır"
@@ -106,7 +105,7 @@
         </span>
     </footer>
 
-    <!-- ========= SCRIPT ========= -->
+    <!-- ======== SCRIPT ======== -->
     <script>
         const langButtons = document.querySelectorAll('.lang-btn');
         const translatableElements = document.querySelectorAll('[data-tr][data-en]');
@@ -121,34 +120,33 @@
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('open');
                 menuToggle.classList.toggle('open');
-                body.classList.toggle('menu-open');
+                document.body.classList.toggle('menu-open');
             });
 
-            // Menüden bir linke tıklanınca menüyü kapat
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.remove('open');
                     menuToggle.classList.remove('open');
-                    body.classList.remove('menu-open');
+                    document.body.classList.remove('menu-open');
                 });
             });
         }
 
-        // Footer yılı
+        // Yıl
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Dil ayarlama
+        // Dil ayarı
         function setLanguage(lang) {
             body.setAttribute('data-language', lang);
             localStorage.setItem('siteLanguage', lang);
 
-            langButtons.forEach(btn => {
-                const bLang = btn.getAttribute('data-lang');
-                btn.classList.toggle('active', bLang === lang);
+            langButtons.forEach(b => {
+                const bLang = b.getAttribute('data-lang');
+                b.classList.toggle('active', bLang === lang);
             });
 
             translatableElements.forEach(el => {
-                el.textContent = (lang === 'tr')
+                el.textContent = lang === 'tr'
                     ? el.getAttribute('data-tr')
                     : el.getAttribute('data-en');
             });

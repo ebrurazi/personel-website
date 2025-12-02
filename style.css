@@ -490,12 +490,14 @@ footer {
         justify-content: flex-start;
     }
 
-    /* Hero ve main üstten biraz aşağı insin */
-    header {
-        padding-top: 6rem;
-        flex-direction: column;
+    .hero-header {
+        padding: 7rem 1.2rem 3rem;
+        min-height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
     }
 
+    
     .hero-layout {
         flex-direction: column;
         text-align: center;

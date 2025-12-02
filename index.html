@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ebru RAZİ | Personal Website</title>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body data-language="tr">
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-left">
+                <div class="logo-circle"></div>
+                <div class="nav-name">Ebru RAZİ</div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" data-tr="Ana sayfa" data-en="Main Page">Ana Sayfa</a>
+                <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
+                <a href="contact.html" data-tr="İletişin" data-en="Contact">İletişim</a>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+
+        <div class="hero-layout">
+            <div class="hero-image-wrapper">
+                <img src="profil-foto.png" alt="Ebru RAZİ" class="hero-image">
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title"
+                    data-tr="Merhaba, ben Ebru RAZİ."
+                    data-en="Hi, I'm Ebru Razi.">
+                    Merhaba, ben Ebru RAZİ.
+                </h1>
+
+                <p class="hero-subtitle"
+                    data-tr="Bilgisayara Mühendisiyim. SAP ABAP, Yapay Zeka ve Backend alanlarında kendimi geliştiriyorum."
+                    data-en="I am a Computer Engineer, focused on SAP ABAP development, AI and Backend.">
+                    Bilgisayar Mühendisiyim. SAP ABAP geliştirme, Yapay Zeka ve Backend alanlarında kendimi geliştiriyorum.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn-primary"
+                        data-tr="Benim Hakkımda"
+                        data-en="About Me"
+                        onclick="window.location.href='about.html'">
+                        Benim Hakkımda
+                    </button>
+                    <button class="btn-ghost"
+                        data-tr="CV'yi Görüntüle"
+                        data-en="View CV"
+                        onclick="window.open('Ebru RAZIII-CV.pdf', '_blank')">
+                        CV'yi Görüntüle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <span id="year"></span> Ebru RAZİ.
+        <span data-tr="Tüm hakları saklıdır"
+            data-en="All rights reserved.">
+            Tüm hakları saklıdır.
+        </span>
+    </footer>
+    <script>
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const translatableElements = document.querySelectorAll('[data-tr][data-en]');
+        const body = document.body;
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            body.setAttribute('data-language', lang);
+            localStorage.setItem('siteLanguage', lang);
+
+            langButtons.forEach(b => {
+                const bLang = b.getAttribute('data-lang');
+                if (bLang === lang) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+
+            translatableElements.forEach(el => {
+                const trText = el.getAttribute('data-tr');
+                const enText = el.getAttribute('data-en');
+
+                if (lang === 'tr') {
+                    el.textContent = trText;
+                } else {
+                    el.textContent = enText;
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('siteLanguage') || 'tr';
+        setLanguage(savedLang);
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const selectedLang = btn.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+</script>
+
+</body>
+</html>

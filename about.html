@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ebru RAZİ | Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css?v=3">
+
+</head>
+
+<body data-language="tr">
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-left">
+                <div class="logo-circle"></div>
+                <div class="nav-name">Ebru RAZİ</div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" data-tr="Ana sayfa" data-en="Main Page">Ana Sayfa</a>
+                <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
+                <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h3 data-tr="Hakkımda" data-en="About Me">Hakkımda</h3>
+
+            <p class="section-subtitle"
+                data-tr="Ben kimim, neler yapıyorum?"
+                data-en="Who am I and what do I do?">
+                Ben kimim, neler yapıyorum?
+            </p>
+
+            <div class="about-card">
+
+                <p
+                    data-tr="Merhaba, ben Ebru RAZİ."
+                    data-en="Hello, I'm Ebru RAZİ.">
+                    Merhaba, ben Ebru RAZİ.
+                </p>
+
+                <p
+                    data-tr="Kocaeli Üniversitesi Bilgisayar Mühendisliği mezunuyum. Yeni bir şeyler üretmeyi ve sürekli kendimi geliştirmeyi gerçekten çok seviyorum. Kariyerimin daha başındayım ve bu süreçte öğrenmeye hem meraklı hem de çok istekliyim."
+                    data-en="I graduated from Kocaeli University, Computer Engineering. I truly enjoy creating new things and constantly improving myself. I'm at the beginning of my career and I'm both curious and eager to learn during this process.">
+                    Kocaeli Üniversitesi Bilgisayar Mühendisliği mezunuyum. Yeni bir şeyler üretmeyi ve sürekli kendimi geliştirmeyi gerçekten çok seviyorum. Kariyerimin daha başındayım ve bu süreçte öğrenmeye hem meraklı hem de çok istekliyim.
+                </p>
+
+                <p
+                    data-tr="SAP ABAP, backend geliştirme ve yapay zeka gibi alanlara özellikle ilgi duyuyorum. Geliştirdiğim projeleri GitHub’da paylaşarak hem kendimi geliştirmeye hem de ilerleyişimi görünür kılmaya çalışıyorum. Şu an iş arayışında olduğum için farklı alanları deneyimlemek ve oralarda projeler üretmek bana daha mantıklı geliyor; böylece hem yeni şeyler öğreniyorum hem de hangi alanda ilerlemek istediğimi daha iyi anlıyorum."
+                    data-en="I am especially interested in SAP ABAP, backend development, and artificial intelligence. I share my projects on GitHub to improve myself and make my progress visible. Since I'm currently job hunting, trying different areas and building projects in them makes more sense to me; this way I learn new things and better understand which direction I want to take.">
+                    SAP ABAP, backend geliştirme ve yapay zeka gibi alanlara özellikle ilgi duyuyorum. Geliştirdiğim projeleri GitHub’da paylaşarak hem kendimi geliştirmeye hem de ilerleyişimi görünür kılmaya çalışıyorum. Şu an iş arayışında olduğum için farklı alanları deneyimlemek ve oralarda projeler üretmek bana daha mantıklı geliyor; böylece hem yeni şeyler öğreniyorum hem de hangi alanda ilerlemek istediğimi daha iyi anlıyorum.
+                </p>
+
+                <p
+                    data-tr="Aynı zamanda Medium’da da yazılar paylaşıyorum. Öğrendiklerimi aktarmak, sürecimi paylaşmak ve kendime bir şeyler katarken bunu görünür hâle getirmek beni gerçekten iyi hissettiriyor."
+                    data-en="I also share articles on Medium. Explaining what I learn, sharing my journey, and making my growth visible while improving myself makes me feel genuinely good.">
+                    Aynı zamanda Medium’da da yazılar paylaşıyorum. Öğrendiklerimi aktarmak, sürecimi paylaşmak ve kendime bir şeyler katarken bunu görünür hâle getirmek beni gerçekten iyi hissettiriyor.
+                </p>
+
+                <p
+                    data-tr="Bu websiteyi de iş arayışımda beni tanımak isteyenlere daha net bir ön hazırlık sunmak ve kendimi daha iyi ifade etmek için hazırladım. Umarım burada hem beni hem de çalışmalarımı daha iyi tanıyabilirsiniz."
+                    data-en="I created this website to better introduce myself to anyone who wants to get to know me during my job search and to express myself more clearly. I hope you can get to know both me and my work better here.">
+                    Bu websiteyi de iş arayışımda beni tanımak isteyenlere daha net bir ön hazırlık sunmak ve kendimi daha iyi ifade etmek için hazırladım. Umarım burada hem beni hem de çalışmalarımı daha iyi tanıyabilirsiniz.
+                </p>
+
+            </div>
+        </section>
+
+
+
+      
+    </main>
+
+    <footer>
+        <span id="year"></span> Ebru RAZİ.
+        <span data-tr="Tüm hakları saklıdır" data-en="All rights reserved.">
+            Tüm hakları saklıdır.
+        </span>
+    </footer>
+
+    <script>
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const translatableElements = document.querySelectorAll('[data-tr][data-en]');
+        const body = document.body;
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            body.setAttribute('data-language', lang);
+            localStorage.setItem('siteLanguage', lang);
+
+            langButtons.forEach(b => {
+                const bLang = b.getAttribute('data-lang');
+                if (bLang === lang) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+
+            translatableElements.forEach(el => {
+                const trText = el.getAttribute('data-tr');
+                const enText = el.getAttribute('data-en');
+
+                if (lang === 'tr') {
+                    el.textContent = trText;
+                } else {
+                    el.textContent = enText;
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('siteLanguage') || 'tr';
+        setLanguage(savedLang);
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const selectedLang = btn.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+    </script>
+
+</body>
+</html>

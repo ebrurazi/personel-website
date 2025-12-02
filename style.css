@@ -424,12 +424,21 @@ footer {
 /* =============== RESPONSIVE (MOBİL) =============== */
 
 @media (max-width: 768px) {
+
+    /* 🟣 Body'yi mobile'da normal akışa döndür */
+    body {
+        margin: 0;
+        display: block;          /* desktop'taki flex yapısını iptal eder */
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
     /* Desktop nav kapansın */
     .desktop-nav {
         display: none;
     }
 
-    /* Mobil header görünsün */
+    /* Mobil header görünsün ve en ÜSTE sabitlensin */
     .mobile-header {
         display: flex;
         align-items: center;
@@ -497,7 +506,6 @@ footer {
         align-items: center;
     }
 
-    
     .hero-layout {
         flex-direction: column;
         text-align: center;
@@ -516,6 +524,7 @@ footer {
         font-size: 2.1rem;
     }
 
+    /* Ana içerik header'ın altından başlasın */
     main {
         padding-top: 6rem;
     }

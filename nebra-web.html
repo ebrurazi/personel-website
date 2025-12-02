@@ -8,28 +8,58 @@
 </head>
 
 <body data-language="tr">
-    <nav>
-        <div class="nav-inner">
-            <div class="nav-left">
-                <div class="logo-circle"></div>
-                <div class="nav-name">Ebru RAZİ</div>
-            </div>
 
-            <div class="nav-links">
-                <a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
-                <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-                <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
-                <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
-                <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
-            </div>
+    <!-- ======== MOBİL HEADER ======== -->
+    <header class="mobile-header">
+        <button class="menu-toggle" aria-label="Menüyü aç/kapat">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-            <div class="lang-switch">
-                <button class="lang-btn active" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
+        <div class="mobile-name">Ebru RAZİ</div>
+    </header>
+
+    <!-- ======== MOBİL MENÜ ======== -->
+    <nav class="mobile-menu">
+        <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+        <a href="about.html" class="mobile-nav-link">Hakkımda</a>
+        <a href="skills.html" class="mobile-nav-link">Yetenekler</a>
+        <a href="projects.html" class="mobile-nav-link">Projeler</a>
+        <a href="contact.html" class="mobile-nav-link">İletişim</a>
+
+        <div class="mobile-lang">
+            <button class="lang-btn active" data-lang="tr">TR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
         </div>
     </nav>
 
+    <!-- ======== MASAÜSTÜ NAVBAR ======== -->
+    <div class="desktop-nav">
+        <nav>
+            <div class="nav-inner">
+                <div class="nav-left">
+                    <div class="logo-circle"></div>
+                    <div class="nav-name">Ebru RAZİ</div>
+                </div>
+
+                <div class="nav-links">
+                    <a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+                    <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                    <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                    <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
+                    <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+                </div>
+
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ======== ANA İÇERİK ======== -->
     <main>
         <section id="project-detail">
             <h3 data-tr="Nebra Web – Kişisel Kitap Takip Uygulaması"
@@ -46,58 +76,27 @@
             <div class="project-card">
 
                 <p data-tr="Nebra, okuduğun kitapları takip edebileceğin, notlar ekleyebileceğin ve favori listeleri oluşturabileceğin minimalist & estetik bir web uygulamasıdır. Django ve Bootstrap kullanılarak geliştirilen bu proje; sade görünümü, kullanıcı dostu yapısı ve gece teması ile tamamen kişisel bir kitap arşivi oluşturmanı sağlar."
-                data-en="Nebra is a minimalist and aesthetic web application where you can track your books, add notes, create favorites, and manage your personal library. Built using Django and Bootstrap, it offers a clean UI, a night theme, and a smooth user experience.">
-                Nebra, okuduğun kitapları takip edebileceğin, notlar ekleyebileceğin ve favori listeleri oluşturabileceğin minimalist & estetik bir web uygulamasıdır. Django ve Bootstrap ile geliştirilen bu proje; sade görünümü, kullanıcı dostu yapısı ve gece teması ile tamamen kişisel bir kitap arşivi oluşturmanı sağlar.
+                   data-en="Nebra is a minimalist and aesthetic web application where you can track your books, add notes, create favorites, and manage your personal library. Built using Django and Bootstrap, it offers a clean UI, a night theme, and a smooth user experience.">
+                    Nebra, okuduğun kitapları takip edebileceğin, notlar ekleyebileceğin ve favori listeleri oluşturabileceğin minimalist & estetik bir web uygulamasıdır. Django ve Bootstrap ile geliştirilen bu proje; sade görünümü, kullanıcı dostu yapısı ve gece teması ile tamamen kişisel bir kitap arşivi oluşturmanı sağlar.
                 </p>
 
                 <h4 style="margin-top:1rem;" data-tr="Özellikler" data-en="Features">Özellikler</h4>
 
                 <ul class="contact-list">
-                    <li data-tr="– Kitap ekleme, düzenleme ve silme"
-                        data-en="– Add, edit and delete books">
-                        – Kitap ekleme, düzenleme ve silme
-                    </li>
-
-                    <li data-tr="– Kitaplara puan verme"
-                        data-en="– Rate books">
-                        – Kitaplara puan verme
-                    </li>
-
-                    <li data-tr="– Not ekleme ve güncelleme"
-                        data-en="– Add and update notes">
-                        – Not ekleme ve güncelleme
-                    </li>
-
-                    <li data-tr="– Favorilere ekleme sistemi"
-                        data-en="– Favorites system">
-                        – Favorilere ekleme sistemi
-                    </li>
-
-                    <li data-tr="– Arama ve filtreleme"
-                        data-en="– Search and filtering">
-                        – Arama ve filtreleme
-                    </li>
-
-                    <li data-tr="– Kullanıcı kayıt ve giriş sistemi"
-                        data-en="– User registration and login system">
-                        – Kullanıcı kayıt ve giriş sistemi
-                    </li>
-
-                    <li data-tr="– Gece temalı modern arayüz"
-                        data-en="– Modern night-themed interface">
-                        – Gece temalı modern arayüz
-                    </li>
-
-                    <li data-tr="– Kişisel kitap arşivi oluşturma"
-                        data-en="– Build your personal book archive">
-                        – Kişisel kitap arşivi oluşturma
-                    </li>
+                    <li data-tr="– Kitap ekleme, düzenleme ve silme" data-en="– Add, edit and delete books">– Kitap ekleme, düzenleme ve silme</li>
+                    <li data-tr="– Kitaplara puan verme" data-en="– Rate books">– Kitaplara puan verme</li>
+                    <li data-tr="– Not ekleme ve güncelleme" data-en="– Add and update notes">– Not ekleme ve güncelleme</li>
+                    <li data-tr="– Favorilere ekleme sistemi" data-en="– Favorites system">– Favorilere ekleme sistemi</li>
+                    <li data-tr="– Arama ve filtreleme" data-en="– Search and filtering">– Arama ve filtreleme</li>
+                    <li data-tr="– Kullanıcı kayıt ve giriş sistemi" data-en="– User registration and login system">– Kullanıcı kayıt ve giriş sistemi</li>
+                    <li data-tr="– Gece temalı modern arayüz" data-en="– Modern night-themed interface">– Gece temalı modern arayüz</li>
+                    <li data-tr="– Kişisel kitap arşivi oluşturma" data-en="– Build your personal book archive">– Kişisel kitap arşivi oluşturma</li>
                 </ul>
-
 
                 <h4 style="margin-top:1rem;" data-tr="Kullanılan Teknolojiler" data-en="Technologies Used">
                     Kullanılan Teknolojiler
                 </h4>
+
                 <p class="project-meta">
                     Python · Django · HTML · CSS · Bootstrap · SQLite · Django Auth System
                 </p>
@@ -115,7 +114,7 @@
         </section>
     </main>
 
-
+    <!-- ======== FOOTER ======== -->
     <footer>
         <span id="year"></span> Ebru RAZİ.
         <span data-tr="Tüm hakları saklıdır" data-en="All rights reserved.">
@@ -123,43 +122,50 @@
         </span>
     </footer>
 
+    <!-- ======== SCRIPT ======== -->
     <script>
         const langButtons = document.querySelectorAll('.lang-btn');
         const translatableElements = document.querySelectorAll('[data-tr][data-en]');
         const body = document.body;
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
 
-        if (menuToggle && nav) {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        // Mobil menü aç/kapa
+        if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+                menuToggle.classList.toggle('open');
+                document.body.classList.toggle('menu-open');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    menuToggle.classList.remove('open');
+                    document.body.classList.remove('menu-open');
+                });
             });
         }
 
+        // Yıl
         document.getElementById("year").textContent = new Date().getFullYear();
 
+        // Dil ayarı
         function setLanguage(lang) {
             body.setAttribute('data-language', lang);
             localStorage.setItem('siteLanguage', lang);
 
             langButtons.forEach(b => {
                 const bLang = b.getAttribute('data-lang');
-                if (bLang === lang) {
-                    b.classList.add('active');
-                } else {
-                    b.classList.remove('active');
-                }
+                b.classList.toggle('active', bLang === lang);
             });
 
             translatableElements.forEach(el => {
-                const trText = el.getAttribute('data-tr');
-                const enText = el.getAttribute('data-en');
-
-                if (lang === 'tr') {
-                    el.textContent = trText;
-                } else {
-                    el.textContent = enText;
-                }
+                el.textContent = lang === 'tr'
+                    ? el.getAttribute('data-tr')
+                    : el.getAttribute('data-en');
             });
         }
 
@@ -168,8 +174,7 @@
 
         langButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const selectedLang = btn.getAttribute('data-lang');
-                setLanguage(selectedLang);
+                setLanguage(btn.getAttribute('data-lang'));
             });
         });
     </script>

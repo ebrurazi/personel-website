@@ -8,177 +8,154 @@
 </head>
 
 <body data-language="tr">
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-left">
+                <div class="logo-circle"></div>
+                <div class="nav-name">Ebru RAZİ</div>
+            </div>
 
-    <!-- ======== MOBİL HEADER ======== -->
-    <header class="mobile-header">
-        <button class="menu-toggle" aria-label="Menüyü aç/kapat">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <div class="nav-links">
+                <a href="index.html" data-tr="Ana sayfa" data-en="Main Page">Ana Sayfa</a>
+                <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
+                <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+            </div>
 
-        <div class="mobile-name">Ebru RAZİ</div>
-    </header>
-
-    <!-- ======== MOBİL MENÜ ======== -->
-    <nav class="mobile-menu">
-        <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
-        <a href="about.html" class="mobile-nav-link">Hakkımda</a>
-        <a href="skills.html" class="mobile-nav-link">Yetenekler</a>
-        <a href="projects.html" class="mobile-nav-link">Projeler</a>
-        <a href="contact.html" class="mobile-nav-link">İletişim</a>
-
-        <div class="mobile-lang">
-            <button class="lang-btn active" data-lang="tr">TR</button>
-            <button class="lang-btn" data-lang="en">EN</button>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
         </div>
     </nav>
 
-    <!-- ======== MASAÜSTÜ NAVBAR ======== -->
-    <div class="desktop-nav">
-        <nav>
-            <div class="nav-inner">
-                <div class="nav-left">
-                    <div class="logo-circle"></div>
-                    <div class="nav-name">Ebru RAZİ</div>
-                </div>
-
-                <div class="nav-links">
-                    <a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
-                    <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-                    <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
-                    <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
-                    <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
-                </div>
-
-                <div class="lang-switch">
-                    <button class="lang-btn active" data-lang="tr">TR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <!-- ======== PROJELER İÇERİĞİ ======== -->
     <main>
         <section id="projects">
             <h3 data-tr="Projeler" data-en="Projects">Projeler</h3>
-
             <p class="section-subtitle"
-               data-tr="Üzerinde çalıştığım bazı projeler."
-               data-en="Some of the projects I've worked on.">
-               Üzerinde çalıştığım bazı projeler.
+                data-tr="Üzerinde çalıştığım bazı projeler."
+                data-en="Some of the projects I've worked on.">
+                Üzerinde çalıştığım bazı projeler.
             </p>
 
-            <!-- 1 - CLAM -->
             <div class="project-card" onclick="window.location.href='clam-based.html'">
-                <h4 data-tr="CLAM Tabanlı Kanser Sınıflandırma Sistemi (TÜBİTAK 2209-A)"
+                <h4
+                    data-tr="CLAM Tabanlı Kanser Sınıflandırma Sistemi (TÜBİTAK 2209-A)"
                     data-en="CLAM-Based Cancer Classification System (TÜBİTAK 2209-A)">
                     CLAM Tabanlı Kanser Sınıflandırma Sistemi (TÜBİTAK 2209-A)
                 </h4>
-
-                <p data-tr="Histopatolojik görüntülerden meme ve kolon kanserini sınıflandırmak için CLAM tabanlı çoklu örnek öğrenme yaklaşımı kullandım."
-                   data-en="I developed an AI system using a CLAM-based MIL approach to classify breast and colon cancer from histopathological images.">
-                   Histopatolojik görüntülerden meme ve kolon kanserini sınıflandırmak için CLAM tabanlı çoklu örnek öğrenme yaklaşımı kullandım.
+                <p
+                    data-tr="Histopatolojik görüntülerden meme ve kolon kanserini sınıflandırmak için CLAM tabanlı çoklu örnek öğrenme yaklaşımı kullandığım bir yapay zeka sistemi geliştirdim. Görüntü ön işleme, patch üretimi, özellik çıkarımı ve model değerlendirme aşamalarında aktif rol aldım."
+                    data-en="I developed an AI system that uses a CLAM-based multiple instance learning approach to classify breast and colon cancer from histopathological images. I worked on image preprocessing, patch generation, feature extraction and model evaluation.">
+                    Histopatolojik görüntülerden meme ve kolon kanserini sınıflandırmak için CLAM tabanlı çoklu örnek öğrenme yaklaşımı kullandığım bir yapay zeka sistemi geliştirdim. Görüntü ön işleme, patch üretimi, özellik çıkarımı ve model değerlendirme aşamalarında aktif rol aldım.
                 </p>
-
-                <p class="project-meta">Python · PyTorch · DenseNet169 · CLAM · Django</p>
+                <p class="project-meta">
+                    Python · PyTorch · DenseNet169 · CLAM · Django
+                </p>
             </div>
 
-            <!-- 2 - Problem Solver -->
             <div class="project-card" onclick="window.location.href='problem-solver.html'">
-                <h4 data-tr="Problem Solver Platform – Çözüm Paylaşım Uygulaması"
+                <h4
+                    data-tr="Problem Solver Platform – Çözüm Paylaşım Uygulaması"
                     data-en="Problem Solver Platform – Solution Sharing Web App">
                     Problem Solver Platform – Çözüm Paylaşım Uygulaması
                 </h4>
-
-                <p data-tr=".NET ve MySQL kullanarak ekip içi problem/çözüm takip sistemi geliştirdim."
-                   data-en="I built an internal problem/solution tracking platform using .NET and MySQL.">
-                   .NET ve MySQL kullanarak ekip içi problem/çözüm takip sistemi geliştirdim.
+                <p
+                    data-tr=".NET ve MySQL kullanarak ekiplerin yaşadığı sorunları ve çözümlerini tek bir yerde toplayan dahili bir web uygulaması geliştirdim. Kullanıcı/ yönetici rolleri, soruların eklenmesi ve çözümlerin yönetilmesi gibi akışları tasarladım."
+                    data-en="I built an internal web application with .NET and MySQL where teams can share problems and their solutions in one place. I designed flows such as user/admin roles, adding issues and managing solutions.">
+                    .NET ve MySQL kullanarak ekiplerin yaşadığı sorunları ve çözümlerini tek bir yerde toplayan dahili bir web uygulaması geliştirdim. Kullanıcı/ yönetici rolleri, soruların eklenmesi ve çözümlerin yönetilmesi gibi akışları tasarladım.
                 </p>
-
-                <p class="project-meta">C# · .NET · MySQL · PhpMyAdmin · MVC</p>
+                <p class="project-meta">
+                    C# · .NET · MySQL · PhpMyAdmin · Web Uygulaması
+                </p>
             </div>
 
-            <!-- 3 - Wordle -->
             <div class="project-card" onclick="window.location.href='wordle-style.html'">
-                <h4 data-tr="Wordle Tarzı Kelime Tahmin Oyunu (Mobil)"
+                <h4
+                    data-tr="Wordle Tarzı Kelime Tahmin Oyunu (Mobil)"
                     data-en="Wordle-Style Mobile Word Game">
                     Wordle Tarzı Kelime Tahmin Oyunu (Mobil)
                 </h4>
-
-                <p data-tr="Flutter ile arayüz, Firebase ile veri yönetimi sağlayarak Wordle benzeri kelime oyunu geliştirdim."
-                   data-en="I developed a Wordle-style mobile game using Flutter and Firebase.">
-                   Flutter ile arayüz, Firebase ile veri yönetimi sağlayarak Wordle benzeri kelime oyunu geliştirdim.
+                <p
+                    data-tr="Flutter ile kullanıcı arayüzünü tasarladığım ve Firebase ile verileri yönettiğim Wordle benzeri bir kelime oyunu geliştirdim. Harflerin doğru/yanlış ve doğru konumda olup olmadığını gösteren geri bildirim mekanizmasını kurguladım."
+                    data-en="I developed a Wordle-like mobile word game where I designed the UI with Flutter and managed data with Firebase. I implemented the feedback mechanism showing whether letters are correct, wrong, or in the correct position.">
+                    Flutter ile kullanıcı arayüzünü tasarladığım ve Firebase ile verileri yönettiğim Wordle benzeri bir kelime oyunu geliştirdim. Harflerin doğru/yanlış ve doğru konumda olup olmadığını gösteren geri bildirim mekanizmasını kurguladım.
                 </p>
-
-                <p class="project-meta">Flutter · Dart · Firebase · Mobil Oyun</p>
+                <p class="project-meta">
+                    Flutter · Dart · Firebase · Mobil Oyun
+                </p>
             </div>
 
-            <!-- 4 - Academic Article Recommender -->
             <div class="project-card" onclick="window.location.href='academic-article.html'">
-                <h4 data-tr="Akademik Makale Öneri Sistemi"
+                <h4
+                    data-tr="Akademik Makale Öneri Sistemi"
                     data-en="Academic Article Recommendation System">
                     Akademik Makale Öneri Sistemi
                 </h4>
-
-                <p data-tr="FastText ve SciBERT ile gömme vektörleri üreterek kullanıcıya akademik makale öneren bir algoritma geliştirdim."
-                   data-en="I developed an academic article recommendation system using FastText and SciBERT embeddings.">
-                   FastText ve SciBERT ile gömme vektörleri üreterek kullanıcıya akademik makale öneren bir algoritma geliştirdim.
+                <p
+                    data-tr="Akademik makalelerin başlık ve özetlerini işleyerek FastText ve SciBERT ile gömme vektörleri ürettim; kullanıcı metnine en yakın ilk 5 makaleyi öneren bir öneri sistemi geliştirdim."
+                    data-en="I processed article titles and abstracts and generated embeddings using FastText and SciBERT to build a recommendation system that suggests the top 5 relevant academic articles for a given user query.">
+                    Akademik makalelerin başlık ve özetlerini işleyerek FastText ve SciBERT ile gömme vektörleri ürettim; kullanıcı metnine en yakın ilk 5 makaleyi öneren bir öneri sistemi geliştirdim.
                 </p>
-
-                <p class="project-meta">Python · NLP · FastText · SciBERT · MongoDB</p>
+                <p class="project-meta">
+                    Python · NLP · FastText · SciBERT · MongoDB
+                </p>
             </div>
 
-            <!-- 5 - Web Scraping -->
             <div class="project-card" onclick="window.location.href='web-scraping.html'">
-                <h4 data-tr="Akademik Yayın Arama Uygulaması (Web Scraping)"
+                <h4
+                    data-tr="Akademik Yayın Arama Uygulaması (Web Scraping)"
                     data-en="Academic Publication Search App (Web Scraping)">
                     Akademik Yayın Arama Uygulaması (Web Scraping)
                 </h4>
-
-                <p data-tr="Scraping → MongoDB → Elasticsearch → Django arayüz pipeline'ı kurarak akademik yayın arama uygulaması geliştirdim."
-                   data-en="I built an academic publication search pipeline using scraping → MongoDB → Elasticsearch → Django.">
-                   Scraping → MongoDB → Elasticsearch → Django arayüz pipeline'ı kurarak akademik yayın arama uygulaması geliştirdim.
+                <p
+                    data-tr="Belirli anahtar kelimelere göre akademik sitelerden web scraping ile veri çekip MongoDB’de sakladım ve Elasticsearch ile indeksleyerek Django tabanlı bir arama arayüzü geliştirdim."
+                    data-en="I collected academic publication data via web scraping based on keywords, stored it in MongoDB, indexed it with Elasticsearch, and built a Django-based search interface.">
+                    Belirli anahtar kelimelere göre akademik sitelerden web scraping ile veri çekip MongoDB’de sakladım ve Elasticsearch ile indeksleyerek Django tabanlı bir arama arayüzü geliştirdim.
                 </p>
-
-                <p class="project-meta">Python · Django · MongoDB · Elasticsearch · Web Scraping</p>
+                <p class="project-meta">
+                    Python · Django · MongoDB · Elasticsearch · Web Scraping
+                </p>
             </div>
 
-            <!-- 6 - Nebra Web -->
+
             <div class="project-card" onclick="window.location.href='nebra-web.html'">
-                <h4 data-tr="Nebra Web – Kişisel Web Projesi"
+                <h4
+                    data-tr="Nebra Web – Kişisel Web Projesi"
                     data-en="Nebra Web – Personal Web Project">
                     Nebra Web – Kişisel Web Projesi
                 </h4>
-
-                <p data-tr="Filtreleme ve modern tasarım odaklı Django tabanlı kişisel web projesi geliştirdim."
-                   data-en="I developed a Django-based personal web project focusing on filtering and modern design.">
-                   Filtreleme ve modern tasarım odaklı Django tabanlı kişisel web projesi geliştirdim.
+                <p
+                    data-tr="Filtreleme ve modern arayüz üzerine odaklandığım, Django tabanlı kişisel bir web projesi geliştirdim. Kullanıcıların içerikleri farklı kriterlere göre filtreleyebildiği sade bir yapı tasarladım."
+                    data-en="I developed a Django-based personal web project focused on filtering and a modern UI, where users can filter content based on different criteria within a clean layout.">
+                    Filtreleme ve modern arayüz üzerine odaklandığım, Django tabanlı kişisel bir web projesi geliştirdim. Kullanıcıların içerikleri farklı kriterlere göre filtreleyebildiği sade bir yapı tasarladım.
                 </p>
-
-                <p class="project-meta">Django · HTML · CSS · JavaScript</p>
+                <p class="project-meta">
+                    Django · HTML · CSS · JavaScript
+                </p>
             </div>
 
-            <!-- 7 - Car Racing -->
             <div class="project-card" onclick="window.location.href='car-racing.html'">
-                <h4 data-tr="CarRacing - Mobil Araba Yarışı Oyunu"
+                <h4
+                    data-tr="CarRacing - Mobil Araba Yarışı Oyunu"
                     data-en="CarRacing - Mobile Car Racing Game">
                     CarRacing - Mobil Araba Yarışı Oyunu
                 </h4>
-
-                <p data-tr="Unity ile eğlenceli mobil araba yarışı oyunu geliştirdim."
-                   data-en="I built a fun mobile racing game with Unity.">
-                   Unity ile eğlenceli mobil araba yarışı oyunu geliştirdim.
+                <p
+                    data-tr="Unity ile geliştirdiğim, farklı karakter ve araba seçenekleri sunan eğlenceli bir mobil araba yarışı oyunu. Oyunda skor takibi ve zorluk artışı gibi mekanikler bulunuyor."
+                    data-en="A fun mobile car racing game I developed with Unity, featuring different character and car options, score tracking and increasing difficulty.">
+                    Unity ile geliştirdiğim, farklı karakter ve araba seçenekleri sunan eğlenceli bir mobil araba yarışı oyunu. Oyunda skor takibi ve zorluk artışı gibi mekanikler bulunuyor.
                 </p>
-
-                <p class="project-meta">Unity · C# · Mobile Game</p>
+                <p class="project-meta">
+                    Unity · C# · Mobile Game
+                </p>
             </div>
 
         </section>
     </main>
 
-    <!-- ======== FOOTER ======== -->
+
     <footer>
         <span id="year"></span> Ebru RAZİ.
         <span data-tr="Tüm hakları saklıdır" data-en="All rights reserved.">
@@ -186,58 +163,54 @@
         </span>
     </footer>
 
-    <!-- ======== SCRIPT ======== -->
     <script>
         const langButtons = document.querySelectorAll('.lang-btn');
         const translatableElements = document.querySelectorAll('[data-tr][data-en]');
         const body = document.body;
-
         const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        const nav = document.querySelector('nav');
 
-        // Mobil menü aç/kapa
-        if (menuToggle && mobileMenu) {
+        if (menuToggle && nav) {
             menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('open');
-                menuToggle.classList.toggle('open');
-                body.classList.toggle('menu-open');
-            });
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('open');
-                    menuToggle.classList.remove('open');
-                    body.classList.remove('menu-open');
-                });
+                nav.classList.toggle('open');
             });
         }
 
-        // Yıl
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Dil
         function setLanguage(lang) {
             body.setAttribute('data-language', lang);
             localStorage.setItem('siteLanguage', lang);
 
-            langButtons.forEach(btn => {
-                const btnLang = btn.getAttribute('data-lang');
-                btn.classList.toggle('active', btnLang === lang);
+            langButtons.forEach(b => {
+                const bLang = b.getAttribute('data-lang');
+                if (bLang === lang) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
             });
 
             translatableElements.forEach(el => {
-                el.textContent = lang === 'tr'
-                    ? el.getAttribute('data-tr')
-                    : el.getAttribute('data-en');
+                const trText = el.getAttribute('data-tr');
+                const enText = el.getAttribute('data-en');
+
+                if (lang === 'tr') {
+                    el.textContent = trText;
+                } else {
+                    el.textContent = enText;
+                }
             });
         }
 
-        const saved = localStorage.getItem('siteLanguage') || 'tr';
-        setLanguage(saved);
+        const savedLang = localStorage.getItem('siteLanguage') || 'tr';
+        setLanguage(savedLang);
 
         langButtons.forEach(btn => {
-            btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+            btn.addEventListener('click', () => {
+                const selectedLang = btn.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
         });
     </script>
 

@@ -5,57 +5,31 @@
     <title>Ebru RAZİ | Personal Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css?v=3">
+
 </head>
 
 <body data-language="tr">
-    <!-- MOBİL HEADER -->
-    <header class="mobile-header">
-        <button class="menu-toggle" aria-label="Menüyü aç/kapat">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-left">
+                <div class="logo-circle"></div>
+                <div class="nav-name">Ebru RAZİ</div>
+            </div>
 
-        <div class="mobile-name">Ebru RAZİ</div>
-    </header>
+            <div class="nav-links">
+                <a href="index.html" data-tr="Ana sayfa" data-en="Main Page">Ana Sayfa</a>
+                <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
+                <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+            </div>
 
-    <!-- MOBİL MENÜ -->
-    <nav class="mobile-menu">
-        <a href="index.html" class="mobile-nav-link">Ana sayfa</a>
-        <a href="about.html" class="mobile-nav-link">Hakkımda</a>
-        <a href="skills.html" class="mobile-nav-link">Yetenekler</a>
-        <a href="projects.html" class="mobile-nav-link">Projeler</a>
-        <a href="contact.html" class="mobile-nav-link">İletişim</a>
-
-        <div class="mobile-lang">
-            <button class="lang-btn active" data-lang="tr">TR</button>
-            <button class="lang-btn" data-lang="en">EN</button>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
         </div>
     </nav>
-    
-    <div class="desktop-nav">
-        <nav>
-            <div class="nav-inner">
-                <div class="nav-left">
-                    <div class="logo-circle"></div>
-                    <div class="nav-name">Ebru RAZİ</div>
-                </div>
-
-                <div class="nav-links">
-                    <a href="index.html" data-tr="Ana sayfa" data-en="Main Page">Ana Sayfa</a>
-                    <a href="about.html" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-                    <a href="skills.html" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
-                    <a href="projects.html" data-tr="Projeler" data-en="Projects">Projeler</a>
-                    <a href="contact.html" data-tr="İletişim" data-en="Contact">İletişim</a>
-                </div>
-
-                <div class="lang-switch">
-                    <button class="lang-btn active" data-lang="tr">TR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-            </div>
-        </nav>
-    </div>
 
     <main>
         <section id="about">
@@ -101,6 +75,10 @@
 
             </div>
         </section>
+
+
+
+      
     </main>
 
     <footer>
@@ -115,23 +93,11 @@
         const translatableElements = document.querySelectorAll('[data-tr][data-en]');
         const body = document.body;
         const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        const nav = document.querySelector('nav');
 
-        if (menuToggle && mobileMenu) {
+        if (menuToggle && nav) {
             menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('open');
-                menuToggle.classList.toggle('open');
-                document.body.classList.toggle('menu-open');
-            });
-
-            // Menüde bir linke tıklayınca da kapansın
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('open');
-                    menuToggle.classList.remove('open');
-                    document.body.classList.remove('menu-open');
-                });
+                nav.classList.toggle('open');
             });
         }
 
@@ -172,5 +138,6 @@
             });
         });
     </script>
+
 </body>
 </html>
